@@ -1,0 +1,29 @@
+:root {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $body-background-color;
+  color: var(--body-text-color);
+
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 0 0.5em;
+}
+
+body *+* {
+  margin-top: 1.5em;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  width: 100%;
+}

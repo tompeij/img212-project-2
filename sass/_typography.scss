@@ -1,0 +1,61 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3 {
+  color: $logo-color;
+  font-weight: 400;
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.logo {
+  color: $logo-color;
+  margin-top: 0;
+  text-align: center;
+
+  &__mark {
+    font-size: 15rem;
+  }
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+.showcase__title {
+  font-weight: 600;
+}
+
+.showcase__image-caption {
+  font-size: 1.4rem;
+  font-style: italic;
+  @include tablet {
+      font-size: 1.1rem;
+    }
+  }
+
+.social-media li a {
+  font-size: 2.5rem;
+}
+
+.copyright__text {
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: center;
+}

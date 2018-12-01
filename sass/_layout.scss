@@ -1,0 +1,80 @@
+.about-me {
+  margin-top: 4rem;
+  padding: 0 1rem;
+  @include tablet {
+    &__text {
+      display: flex;
+
+      & p {
+        flex: 1;
+        margin-top: 0;
+      }
+
+      &--left-column {
+        padding-right: 1.0rem;
+      }
+
+      &--right-column {
+        padding-left: 1.0rem;
+      }
+    }
+  }
+}
+
+.showcase__gallery {
+  display: flex;
+  flex-direction: column-reverse;
+  @include desktop {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-gap: 0.5em;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+
+    & > figure {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    & img {
+      flex: 1;
+      max-width: 100%;
+      object-fit: fill;
+    }
+
+    .showcase__img-1 {
+      grid-column: span 1;
+    }
+
+    .showcase__img-2 {
+      grid-column: span 3;
+    }
+
+    .showcase__img-3 {
+      grid-column: span 2;
+    }
+
+    .showcase__img-4 {
+      grid-column: span 2;
+    }
+  }
+}
+
+footer {
+  margin-top: 10rem;
+
+  .social-media {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .social-media li {
+    margin-top: 0;
+  }
+
+  .copyright {
+    padding: 3rem 0;
+  }
+}
