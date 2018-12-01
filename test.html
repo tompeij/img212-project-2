@@ -1,0 +1,62 @@
+<style>
+    .grid-container {
+        display: grid;
+        grid-auto-flow: dense;
+        grid-gap: 0.5em;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        max-width: 1000px;
+    }
+
+    .grid-container>figure {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .grid-container img {
+        flex: 1;
+        max-width: 100%;
+        object-fit: fill;
+    }
+
+    .img-1 {
+        grid-column: span 1;
+    }
+
+    .img-2 {
+        grid-column: span 3;
+    }
+
+    .img-3 {
+        grid-column: span 2;
+    }
+
+    .img-4 {
+        grid-column: span 2;
+    }
+
+    figcaption {
+        padding-top: .4rem;
+        font-size: .75rem;
+        padding-left: 1em;
+    }
+</style>
+
+<div class="grid-container">
+    <figure class="img-1">
+        <img src="img/Sketchbook_Gesture_small.png" alt="">
+        <figcaption class="text-1">Gesture in Perspective - FIN-111 Drawing &amp 2D Language II</figcaption>
+    </figure>
+    <figure class="img-2">
+        <img src="img/Personal_Map_small.png" alt="">
+        <figcaption class="text-2">Illustraded Map of Tierra Del Feugo - IMG-102 Computer Graphics I</figcaption>
+    </figure>
+    <figure class="img-3">
+        <img src="img/Final_Independent_small.png" alt="">
+        <figcaption class="text-3">Nice Day at the Beach - FIN-111 Drawing &amp 2D Language II</figcaption>
+    </figure>
+    <figure class="img-4">
+        <img src="img/Super_Text_small.png" alt="">
+        <figcaption class="text-4">Super Text Web Landing Page - IMG-112 Typography</figcaption>
+    </figure>
+</div>
