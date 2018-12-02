@@ -2,8 +2,9 @@
 
 .about-me {
   margin-top: increase($size-baseline, 3rem);
-  padding: 0 1rem;
+  padding: 0 ($size-baseline * 2);
   @include tablet {
+    padding: 0 $size-baseline;
     &__text {
       display: flex;
 
