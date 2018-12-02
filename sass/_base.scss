@@ -1,3 +1,4 @@
+/* Base */
 :root {
   box-sizing: border-box;
   font-size: 10px;
@@ -11,15 +12,13 @@
 
 body {
   background-color: $body-background-color;
-  color: var(--body-text-color);
-
   margin: 0 auto;
-  max-width: 100rem;
-  padding: 0 0.5em;
+  max-width: $size-baseline * 100;
+  padding: 0 decrease($size-baseline, .25);
 }
 
 body *+* {
-  margin-top: 1.5em;
+  margin-top: $size-baseline * 2;
 }
 
 img {

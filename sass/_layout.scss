@@ -1,5 +1,7 @@
+/***** Layout *****/
+
 .about-me {
-  margin-top: 4rem;
+  margin-top: increase($size-baseline, 3rem);
   padding: 0 1rem;
   @include tablet {
     &__text {
@@ -21,27 +23,30 @@
   }
 }
 
-.showcase__gallery {
-  display: flex;
-  flex-direction: column-reverse;
+.showcase {
+  .showcase__gallery {
+    display: flex;
+    flex-direction: column-reverse;
+    @include desktop {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-gap: 0.5em;
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+
+      & > figure {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+
+      & img {
+        flex: 1;
+        max-width: 100%;
+        object-fit: fill;
+      }
+    }
+  }
   @include desktop {
-    display: grid;
-    grid-auto-flow: dense;
-    grid-gap: 0.5em;
-    grid-template-columns: 2fr 1fr 1fr 2fr;
-
-    & > figure {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-    }
-
-    & img {
-      flex: 1;
-      max-width: 100%;
-      object-fit: fill;
-    }
-
     .showcase__img-1 {
       grid-column: span 1;
     }
@@ -63,10 +68,17 @@
 footer {
   margin-top: 10rem;
 
+  .colophon {
+    margin: 0 auto;
+    width: 55%;
+  }
+
   .social-media {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     padding-left: 0;
   }
 

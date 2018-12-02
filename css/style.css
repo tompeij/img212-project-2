@@ -1,65 +1,9 @@
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.75;
-}
-
-h1,
-h2,
-h3 {
-  color: #0c1821;
-  font-weight: 400;
-  margin: 0;
-  padding: 1em 0;
-  text-align: center;
-}
-
-a {
-  color: #29648a;
-  text-decoration: none;
-  transition: color 0.5s;
-}
-a:hover {
-  color: #06a77d;
-}
-
-.logo {
-  color: #0c1821;
-  margin-top: 0;
-  text-align: center;
-}
-.logo__mark {
-  font-size: 15rem;
-}
-
-.text--italic {
-  font-style: italic;
-}
-
-.showcase__title {
-  font-weight: 600;
-}
-
-.showcase__image-caption {
+.copyright__text, .colophon, .showcase__image-caption {
   font-size: 1.4rem;
   font-style: italic;
 }
-@media (min-width: 600px) {
-  .showcase__image-caption {
-    font-size: 1.1rem;
-  }
-}
 
-.social-media li a {
-  font-size: 2.5rem;
-}
-
-.copyright__text {
-  font-size: 1.4rem;
-  font-style: italic;
-  text-align: center;
-}
-
+/* Base */
 :root {
   box-sizing: border-box;
   font-size: 10px;
@@ -73,14 +17,13 @@ a:hover {
 
 body {
   background-color: #ffffff;
-  color: var(--body-text-color);
   margin: 0 auto;
   max-width: 100rem;
-  padding: 0 0.5em;
+  padding: 0 0.75rem;
 }
 
 body * + * {
-  margin-top: 1.5em;
+  margin-top: 2rem;
 }
 
 img {
@@ -89,6 +32,90 @@ img {
   width: 100%;
 }
 
+/***** Typography *****/
+body {
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3 {
+  color: #0c1821;
+  font-weight: 400;
+  margin: 0;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+a {
+  color: #29648a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+a:hover {
+  color: #06a77d;
+}
+
+.menu-nav {
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+
+.logo {
+  color: #0c1821;
+  margin-top: 0;
+  text-align: center;
+}
+.logo__mark {
+  font-size: 15.6rem;
+}
+
+.about-me__tagline--italic {
+  font-style: italic;
+}
+
+.showcase__title {
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .showcase__image-caption {
+    font-size: 1.1rem;
+  }
+}
+
+.social-media li a {
+  font-size: 2.6rem;
+}
+
+.copyright__text {
+  text-align: center;
+}
+
+/* Navigation */
+.menu-nav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-top: 2rem;
+}
+.menu-nav li {
+  margin-top: 0;
+}
+@media (min-width: 600px) {
+  .menu-nav {
+    justify-content: flex-end;
+  }
+  .menu-nav li + li {
+    padding-left: 3rem;
+  }
+}
+
+/***** Layout *****/
 .about-me {
   margin-top: 4rem;
   padding: 0 1rem;
@@ -109,37 +136,39 @@ img {
   }
 }
 
-.showcase__gallery {
+.showcase .showcase__gallery {
   display: flex;
   flex-direction: column-reverse;
 }
 @media (min-width: 800px) {
-  .showcase__gallery {
+  .showcase .showcase__gallery {
     display: grid;
     grid-auto-flow: dense;
     grid-gap: 0.5em;
     grid-template-columns: 2fr 1fr 1fr 2fr;
   }
-  .showcase__gallery > figure {
+  .showcase .showcase__gallery > figure {
     display: flex;
     flex-direction: column;
     margin: 0;
   }
-  .showcase__gallery img {
+  .showcase .showcase__gallery img {
     flex: 1;
     max-width: 100%;
     object-fit: fill;
   }
-  .showcase__gallery .showcase__img-1 {
+}
+@media (min-width: 800px) {
+  .showcase .showcase__img-1 {
     grid-column: span 1;
   }
-  .showcase__gallery .showcase__img-2 {
+  .showcase .showcase__img-2 {
     grid-column: span 3;
   }
-  .showcase__gallery .showcase__img-3 {
+  .showcase .showcase__img-3 {
     grid-column: span 2;
   }
-  .showcase__gallery .showcase__img-4 {
+  .showcase .showcase__img-4 {
     grid-column: span 2;
   }
 }
@@ -147,10 +176,16 @@ img {
 footer {
   margin-top: 10rem;
 }
+footer .colophon {
+  margin: 0 auto;
+  width: 55%;
+}
 footer .social-media {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   padding-left: 0;
 }
 footer .social-media li {
@@ -158,26 +193,6 @@ footer .social-media li {
 }
 footer .copyright {
   padding: 3rem 0;
-}
-
-/* Nav Section */
-.menu-nav {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin-bottom: 0;
-  padding-top: 2rem;
-}
-@media (min-width: 600px) {
-  .menu-nav {
-    justify-content: flex-end;
-  }
-  .menu-nav li {
-    margin-top: 0;
-  }
-  .menu-nav li + li {
-    padding-left: 3rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

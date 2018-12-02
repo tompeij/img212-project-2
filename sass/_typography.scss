@@ -1,6 +1,9 @@
+/***** Typography *****/
+
 body {
+  color: $body-text-color;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: $font-size-default;
   line-height: 1.75;
 }
 
@@ -8,9 +11,9 @@ h1,
 h2,
 h3 {
   color: $logo-color;
-  font-weight: 400;
+  font-weight: $font-weight-default * 4;
   margin: 0;
-  padding: 1em 0;
+  padding: increase($size-baseline, 2) 0;
   text-align: center;
 }
 
@@ -24,38 +27,46 @@ a {
   }
 }
 
+.menu-nav {
+  font-size: increase($font-size-default, .4rem);
+  text-transform: lowercase;
+}
+
+
 .logo {
   color: $logo-color;
   margin-top: 0;
   text-align: center;
 
   &__mark {
-    font-size: 15rem;
+    font-size: increase($font-size-default, 14rem);
   }
 }
 
-.text--italic {
+.about-me__tagline--italic {
   font-style: italic;
 }
 
 .showcase__title {
-  font-weight: 600;
+  font-weight: $font-weight-default * 6;
 }
 
 .showcase__image-caption {
-  font-size: 1.4rem;
-  font-style: italic;
+  @extend %small-text-italic;
   @include tablet {
-      font-size: 1.1rem;
-    }
+    font-size: decrease($font-size-default, .5rem)
   }
+}
 
 .social-media li a {
-  font-size: 2.5rem;
+  font-size: increase($font-size-default, 1rem);
+}
+
+.colophon {
+  @extend %small-text-italic;
 }
 
 .copyright__text {
-  font-size: 1.4rem;
-  font-style: italic;
+  @extend %small-text-italic;
   text-align: center;
 }

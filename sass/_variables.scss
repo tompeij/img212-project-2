@@ -1,3 +1,5 @@
+$size-baseline: 1rem;
+
 $tablet-width: 600px;
 $desktop-width: 800px;
 
@@ -9,3 +11,15 @@ $link-color: #29648a;
 $logo-color: #0c1821;
 $link-hover-color: #06a77d;
 $sass-color: #dd5a6f;
+
+
+$font-size-default: 1.6rem;
+$font-weight-default: 100;
+
+@function increase($value, $increment){
+  @return $value + $increment
+}
+
+@function decrease($value, $decremnet){
+  @return $value - $decremnet
+}

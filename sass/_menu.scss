@@ -1,19 +1,18 @@
-/* Nav Section */
+/* Navigation */
 .menu-nav {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   margin-bottom: 0;
-  padding-top: 2rem;
+  padding-top: $size-baseline * 2;
+  & li {
+    margin-top: 0;
+  }
   @include tablet {
     justify-content: flex-end;
 
-    & li {
-      margin-top: 0;
-
-      &+li {
-        padding-left: 3rem;
-      }
+    & li + li {
+      padding-left: $size-baseline * 3;
     }
   }
 }
