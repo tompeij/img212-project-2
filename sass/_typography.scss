@@ -32,7 +32,6 @@ a {
   text-transform: lowercase;
 }
 
-
 .logo {
   color: $logo-color;
   margin-top: 0;
@@ -54,7 +53,7 @@ a {
 .showcase__image-caption {
   @extend %small-text-italic;
   @include tablet {
-    font-size: decrease($font-size-default, .5rem)
+    font-size: decrease($font-size-default, .5rem);
   }
 }
 
@@ -63,10 +62,9 @@ a {
 }
 
 .colophon {
-  @extend %small-text-italic;
+  @extend %small-text-centered-italic;
 }
 
 .copyright__text {
-  @extend %small-text-italic;
-  text-align: center;
+  @extend %small-text-centered-italic;
 }

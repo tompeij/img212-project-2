@@ -1,10 +1,32 @@
-/***** Layout *****/
+/* Navigation */
+
+.menu-nav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-top: $size-baseline * 2;
+
+  & li {
+    margin-top: 0;
+  }
+  @include tablet {
+    justify-content: flex-end;
+
+    & li + li {
+      padding-left: $size-baseline * 3;
+    }
+  }
+}
+
+/***** About me *****/
 
 .about-me {
   margin-top: increase($size-baseline, 3rem);
   padding: 0 ($size-baseline * 2);
   @include tablet {
     padding: 0 $size-baseline;
+
     &__text {
       display: flex;
 
@@ -14,18 +36,20 @@
       }
 
       &--left-column {
-        padding-right: 1.0rem;
+        padding-right: $size-baseline;
       }
 
       &--right-column {
-        padding-left: 1.0rem;
+        padding-left: $size-baseline;
       }
     }
   }
 }
 
+/***** Showcase *****/
+
 .showcase {
-  .showcase__gallery {
+  &__gallery {
     display: flex;
     flex-direction: column-reverse;
     @include desktop {
@@ -48,46 +72,64 @@
     }
   }
   @include desktop {
-    .showcase__img-1 {
+    &_img-1 {
       grid-column: span 1;
     }
 
-    .showcase__img-2 {
+    &__img-2 {
       grid-column: span 3;
     }
 
-    .showcase__img-3 {
+    &__img-3 {
       grid-column: span 2;
     }
 
-    .showcase__img-4 {
+    &__img-4 {
       grid-column: span 2;
     }
   }
 }
 
+/***** Footer *****/
+
 footer {
-  margin-top: 10rem;
-
-  .colophon {
-    margin: 0 auto;
-    width: 55%;
+  margin-top: $size-baseline * 7.5;
+  @include tablet {
+    margin-top: $size-baseline * 15;
   }
+}
 
-  .social-media {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    padding-left: 0;
+.colophon {
+  margin: 0 auto;
+  width: 85%;
+  @include tablet {
+    width: 52.5rem;
   }
+}
 
-  .social-media li {
-    margin-top: 0;
+@each $color in $color-list {
+  $i: index($color-list, $color);
+  
+  .colophon span:nth-child(#{$i}) {
+    color: $color;
+    font-weight: 600;
   }
+}
 
-  .copyright {
-    padding: 3rem 0;
-  }
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-top: $size-baseline * 4;
+  margin-bottom: $size-baseline * 4;
+  padding-left: 0;
+}
+
+.social-media li {
+  margin-top: 0;
+}
+
+.copyright__text {
+  margin-top: $size-baseline;
+  padding: 0 0 2rem;
 }

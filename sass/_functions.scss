@@ -1,0 +1,6 @@
+@function increase($value, $increment) {
+  @return $value + $increment
+}
+@function decrease($value, $decremnet) {
+  @return $value - $decremnet
+}
