@@ -27,12 +27,13 @@ img {
   width: 100%;
 }
 
+/***** Placeholders *****/
 .showcase__image-caption {
   font-size: 1.4rem;
   font-style: italic;
 }
 
-.copyright__text, .colophon {
+.copyright, .colophon {
   font-size: 1.4rem;
   font-style: italic;
   text-align: center;
@@ -237,7 +238,7 @@ footer {
   margin-top: 0;
 }
 
-.copyright__text {
+.copyright {
   margin-top: 1rem;
   padding: 0 0 2rem;
 }

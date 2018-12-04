@@ -109,7 +109,7 @@ footer {
 
 @each $color in $color-list {
   $i: index($color-list, $color);
-  
+
   .colophon span:nth-child(#{$i}) {
     color: $color;
     font-weight: 600;
@@ -129,7 +129,7 @@ footer {
   margin-top: 0;
 }
 
-.copyright__text {
+.copyright {
   margin-top: $size-baseline;
   padding: 0 0 2rem;
 }
